@@ -1,0 +1,53 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Écran Principal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <script>
+        window.onload = function() {
+            mainPage();
+        }
+    </script>
+
+    <!-- 
+    <div class="index" id="index">
+      <p>Et toi,<br> quel réseau social utilises-tu?</p>
+      <div class="logoContainer" id="logo-selection">
+          <button class="logo" data-logo="facebook">
+              <img src="./logo/facebook.svg" alt="Facebook" class="logo" />
+          </button>
+          <button class="logo"  data-logo="insta">
+              <img src="./logo/insta.svg" alt="Insta" class="logo" />
+          </button>
+          <button class="logo"  data-logo="tiktok">
+              <img src="./logo/tiktok.svg" alt="Tiktok" class="logo" />
+          </button>
+          <button class="logo"  data-logo="bereal">
+              <img src="./logo/bereal.svg" alt="Bereal" class="logo" />
+          </button>
+          <button class="logo"  data-logo="steam">
+              <img src="./logo/steam.svg" alt="Steam" class="logo" />
+          </button>
+          <button class="logo"  data-logo="aliexpress">
+              <img src="./logo/aliexpress.svg" alt="Aliexpress" class="logo" />
+          </button>
+          <button class="logo"  data-logo="snapchat">
+              <img src="./logo/snapchat.svg" alt="Snapchat" class="logo" />
+          </button>
+      </div>
+  </div>
+  -->
+    <button id="reset-btn">Relancer l'application</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!-- public/screen.html -->
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Écran Annexe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="screen-content">
+      <img id="gif-image" class="bgGIF" src="\gif\instagram.gif" alt="GIF 1" />
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- <script src="screen.js"></script> -->
+    <script>
+      // public/screen.js
+      const socket = io();
+
+      // Écouter l'événement de mise à jour des écrans
+      socket.on("miseAJourEcrans", (message) => {
+        document.getElementById(
+          "screen-content"
+        ).innerHTML = `<p>${message}</p>`;
+      });
+
+      // Écouter l'événement de réinitialisation
+      socket.on("resetEcrans", () => {
+        document.getElementById("screen-content").innerHTML =
+          '<img id="gif-image" class="bgGIF" src="/gif/instagram.gif" alt="GIF 1">';
+      });
+
+      // Ajoutez votre code JavaScript pour gérer les interactions avec le socket.io ici
+    </script>
+  </body>
+</html>
