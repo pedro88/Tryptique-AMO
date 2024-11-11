@@ -11,14 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   </head>
   <body>
+    
     <script>
         window.onload = function() {
             mainPage();
-        }
-    </script>
+            addListener();
 
-    <!-- 
-    <div class="index" id="index">
+                }
+    </script>
+     
+    <!-- <div class="index" id="index">
       <p>Et toi,<br> quel réseau social utilises-tu?</p>
       <div class="logoContainer" id="logo-selection">
           <button class="logo" data-logo="facebook">
@@ -43,8 +45,8 @@
               <img src="./logo/snapchat.svg" alt="Snapchat" class="logo" />
           </button>
       </div>
-  </div>
-  -->
+  </div> -->
+
     <button id="reset-btn">Relancer l'application</button>
 
     <script src="/socket.io/socket.io.js"></script>
