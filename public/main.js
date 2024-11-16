@@ -43,7 +43,8 @@ const mainPage = () => {
   document.body.appendChild(indexDiv);
 };
 
-//Création de l'écoute des différents éléments
+//Fonction d'écoute des différents éléments
+
 const addListener = () => {
   document.querySelectorAll(".logo").forEach((button) => {
     button.addEventListener("click", () => {
@@ -54,30 +55,90 @@ const addListener = () => {
       if (element) element.remove();
       console.log(logoId);
 
+      //Fonction d'inscription du message de fin sur l'écran principal + bouton reset
+      const outro = () => {
+        let message = "";
+        if (logoId === "facebook") {
+          message = `Acceptes-tu n'importe qui comme ami sur Facebook?`;
+        } else if (logoId === "insta") {
+          message = `Et toi, comment montres-tu à quelqu'un qu'il compte pour toi?`;
+        } else if (logoId === "tiktok") {
+          message = `Et toi quand tu as une question, comment fais-tu pour vérifier la réponse?`;
+        } else if (logoId === "bereal") {
+          message = `Et toi, est-ce que c'est toujours instantané?`;
+        } else if (logoId === "steam") {
+          message = `Et toi, qu'attends tu dans tes relationS`;
+        } else if (logoId === "aliexpress") {
+          message = `Quand tu souhaites acheter quelque chose, demandes-tu l'accord avant?`;
+        } else if (logoId === "snapchat") {
+          message = `As-tu toujours confiance quand tu envois quelque chose sur Snap?`;
+        } else {
+          message = `Et toi, tu sais où tu te trouves?`;
+        }
+
+        let container = document.getElementById("outro-message");
+        if (!container) {
+          container = document.createElement("div");
+          container.id = "outro-message";
+          buttonContainer.appendChild(container);
+        }
+        container.className = "message2";
+        container.innerHTML = `<div>${message}</div>`;
+        console.log(message);
+
+        const existingResetButton = document.getElementById("reset-btn");
+        if (existingResetButton) existingResetButton.remove()
+          const resetButton = document.createElement("button");
+          resetButton.textContent = "Recommencer";
+          resetButton.id = "reset-btn";
+          buttonContainer.appendChild(resetButton);
+          resetButton.addEventListener("click", () => {
+            socket.emit("reset");
+            resetButton.remove();
+            container.remove();
+            mainPage();
+            addListener();
+          });
+  ;
+      };
+
+      
+// Vérification de l'éxistence des bouton oui et non
+      const existingOuiButton = document.getElementById("oui-btn");
+      const existingNonButton = document.getElementById("non-btn");
+      const existingButtonContainer = document.getElementById("button-container");
+      if (existingButtonContainer) existingButtonContainer.remove();
+      if (existingOuiButton) existingOuiButton.remove();
+      if (existingNonButton) existingNonButton.remove();
+// création du boutonContainer
+      const buttonContainer = document.createElement("div");
+      buttonContainer.id = "button-container";
+      document.body.appendChild(buttonContainer);
+ //création du bouton oui
       const ouiButton = document.createElement("button");
       ouiButton.textContent = "Oui";
       ouiButton.id = "oui-btn";
-      document.body.appendChild(ouiButton);
-      ouiButton.addEventListener("click", () => {
+      buttonContainer.appendChild(ouiButton)
+       ouiButton.addEventListener("click", () => {
         socket.emit("choice", logoId);
+        console.log(logoId);
         ouiButton.remove();
         nonButton.remove();
+        outro();
       });
-
+//création du bouton non
       const nonButton = document.createElement("button");
       nonButton.textContent = "Non";
       nonButton.id = "non-btn";
-      document.body.appendChild(nonButton);
+      buttonContainer.appendChild(nonButton);
       nonButton.addEventListener("click", () => {
         socket.emit("choice", logoId);
+        console.log(logoId);
         ouiButton.remove();
         nonButton.remove();
+        outro();
       });
-
     });
   });
-  // Réinitialisation de l'application
-  document.getElementById("reset-btn").addEventListener("click", () => {
-    socket.emit("reset");
-  });
+ 
 };
