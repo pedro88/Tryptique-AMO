@@ -1,0 +1,3 @@
+TO launch the server you first have to install node.js then just open your terminal and "node server.js"
+
+In your browser localhost:3000/landing.html

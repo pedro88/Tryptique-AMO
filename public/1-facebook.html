@@ -10,6 +10,7 @@
   <body>
     <div id="screen-content">
       <img id="gif-image" class="bgGIF" src="\gif\facebook.gif" alt="GIF 1" />
+        <div id="text-content"></div>
     </div>
 
 
@@ -18,10 +19,11 @@
       // public/screen.js
       const socket = io();
 
+
       // Écouter l'événement de mise à jour des écrans
       socket.on("miseAJourEcrans", (message) => {
         document.getElementById(
-          "screen-content"
+          "text-content"
         ).innerHTML = `<p>${message}</p>`;
       });
 

@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height :100vh;
+}
+
+.index {
+  display: grid;
+  grid-template-columns: 20vw auto 20vw;
+  background-image: url("/logo/eyewall.gif");
+  background-size: contain;
+  height :100vh;
+}
+.logoContainer {
+  width: 60vw;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  grid-column: 2/3;
+}
+
+.logo {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  color: rgb(211, 140, 48);
+  grid-column: 2/3;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+}
+
+.bgGIF {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+#screen-selection {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-style: solid;
+  align-items: center;
+}
+a {
+  border-style: solid;
+  border-radius: 150px;
+  margin: 10px;
+  padding: 30px;
+  text-align: center;
+}
+#screen-content {
+  background-image: url("gif/like.gif");
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+.message {
+  color: rgb(245, 197, 134);
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 1000;
+  font-style: normal;
+  font-size: 60px;
+  text-align: center;
+  word-break: break-word;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#oui-btn, #non-btn, #reset-btn {
+  padding: 20px 30px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 1000;
+  font-style: normal;
+  font-size: 60px;
+  border-radius: 60px;
+  margin: 50px;
+}
+#button-container{
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.message2 {
+  color: rgba(0, 0, 0, 1);
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 1000;
+  font-style: normal;
+  font-size: 60px;
+  text-align: center;
+  word-break: break-word;
+  background-color: rgba(245, 197, 134, 0.5);
+}

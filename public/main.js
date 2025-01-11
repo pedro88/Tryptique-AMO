@@ -57,6 +57,7 @@ const addListener = () => {
 
       //Fonction d'inscription du message de fin sur l'écran principal + bouton reset
       const outro = () => {
+        
         let message = "";
         if (logoId === "facebook") {
           message = `Acceptes-tu n'importe qui comme ami sur Facebook?`;
