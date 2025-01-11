@@ -57,7 +57,6 @@ const addListener = () => {
 
       //Fonction d'inscription du message de fin sur l'écran principal + bouton reset
       const outro = () => {
-        
         let message = "";
         if (logoId === "facebook") {
           message = `Acceptes-tu n'importe qui comme ami sur Facebook?`;
@@ -76,7 +75,8 @@ const addListener = () => {
         } else {
           message = `Et toi, tu sais où tu te trouves?`;
         }
-
+      
+        // Conteneur du message
         let container = document.getElementById("outro-message");
         if (!container) {
           container = document.createElement("div");
@@ -85,23 +85,26 @@ const addListener = () => {
         }
         container.className = "message2";
         container.innerHTML = `<div>${message}</div>`;
-        console.log(message);
-
+      
+        // Création et ajout du bouton "Recommencer"
         const existingResetButton = document.getElementById("reset-btn");
-        if (existingResetButton) existingResetButton.remove()
-          const resetButton = document.createElement("button");
-          resetButton.textContent = "Recommencer";
-          resetButton.id = "reset-btn";
-          buttonContainer.appendChild(resetButton);
-          resetButton.addEventListener("click", () => {
-            socket.emit("reset");
-            resetButton.remove();
-            container.remove();
-            mainPage();
-            addListener();
-          });
-  ;
+        if (existingResetButton) existingResetButton.remove();
+      
+        const resetButton = document.createElement("button");
+        resetButton.textContent = "Recommencer";
+        resetButton.id = "reset-btn";
+        buttonContainer.appendChild(resetButton);
+      
+        // Gestion de l'événement "click" sur le bouton "Recommencer"
+        resetButton.addEventListener("click", () => {
+          socket.emit("reset");
+          resetButton.remove();
+          container.remove();
+          mainPage();
+          addListener();
+        });
       };
+      
 
       
 // Vérification de l'éxistence des bouton oui et non
