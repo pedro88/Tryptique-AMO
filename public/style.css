@@ -1,11 +1,24 @@
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("./BebasNeue-Regular.ttf") format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+#invisible-video {
+  width: 1px;
+  height: 1px;
+  top: -9999px; 
+  left: -9999px;
+}
+
 body {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Bebas Neue";
   color: #ffffff;
   background-color: #2c3e50;
   margin: 0;
@@ -15,28 +28,45 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+h1 {
+  font-family: "Bebas Neue";
+}
 
 #screen-content {
   text-align: center;
   padding: 20px;
+  font-family: "Bebas Neue";
+  color: rgb(211, 140, 48);
+  font-size: 3rem;
+  padding: 10px;
 }
 @media (max-width: 600px) {
   #screen-content {
-    padding: 10px;
+    color: rgb(211, 140, 48);
+    grid-column: 2/3;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: "Bebas Neue";
+    font-weight: 400;
+    font-style: normal;
+    font-size:3rem
   }
-}
+  }
 
-/* Image d'arrière-plan (le GIF dans le conteneur) */
+
+
 .bgGIF {
-  width: 100%; /* Largeur flexible */
-  max-width:440px; /* Limiter la taille max du GIF */
-  height: auto; /* Taille fixe du GIF */
-  border-radius: 10px;
+  width: 90vw; 
+  max-width:100%;
+  height: auto; 
+  border-radius: 50px;
   margin-bottom: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 @media (max-width: 600px) {
   .bgGIF {
+    width: 90vw;
     margin-bottom: 10px;
   }
 }
@@ -46,74 +76,76 @@ body {
   color: #ecf0f1;
   padding: 15px;
   border-radius: 5px;
-  font-size: 1.2rem;
+  font-size: 3.2rem;
   line-height: 1.5;
 }
 @media (max-width: 600px) {
   #text-content {
-    font-size: 1rem;
+    font-family: "Bebas Neue";
+    color: rgb(211, 140, 48);
+    font-size: 3rem;
     padding: 10px;
   }
 }
-/* Conteneur des logos */
+
 .logoContainer {
   display: flex;
-  flex-wrap: wrap; /* Les logos se déplaceront sur plusieurs lignes si nécessaire */
+  flex-wrap: wrap; 
   justify-content: center;
   gap: 15px;
   margin-top: 20px;
 }
 
-/* Définition du style des logos */
+
 .logoContainer .logo {
   background: none;
   border: none;
   cursor: pointer;
-  flex: 0 1 150px; /* 150px minimum par logo, mais flexible */
-  max-width: 150px; /* Les logos auront une taille maximum */
-  margin: 5px; /* Espacement autour des logos */
+  flex: 0 1 150px; 
+  max-width: 150px; 
+  margin: 5px;
 }
 
 .logoContainer .logo img {
-  width: 100%; /* Les logos prennent toute la largeur de leur conteneur */
-  height: auto; /* Garder les proportions des images */
+  width: 100%; 
+  height: auto; 
   transition: transform 0.2s ease;
 }
 
-/* Effet de survol sur les logos */
+
 .logoContainer .logo img:hover {
-  transform: scale(1.1); /* Agrandir au survol */
+  transform: scale(1.1); 
 }
 
-/* Responsivité pour les petits écrans */
+
 @media (max-width: 800px) {
   .logoContainer .logo {
-    flex: 0 1 120px; /* Les logos peuvent occuper une largeur de 120px minimum */
+    flex: 0 1 120px;
   }
 }
 
 @media (max-width: 600px) {
   .logoContainer .logo {
-    flex: 0 1 100px; /* Les logos prennent 100px de largeur minimum */
+    flex: 0 1 100px;
   }
 
   .logoContainer {
-    gap: 10px; /* Espacement réduit sur les petits écrans */
+    gap: 10px; 
   }
 }
 #button-container {
   margin-top: 20px;
   display: flex;
-  gap: 10px;
+  gap: 30px;
   justify-content: center;
 }
 #button-container button {
   background-color: #3498db;
   color: #ffffff;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 1rem;
+  padding: 30px 20px;
+  border-radius: 50px;
+  font-size: 5rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -128,46 +160,56 @@ body {
 }
 
 
-}/*# sourceMappingURL=style.css.map */
 p {
   color: rgb(211, 140, 48);
   grid-column: 2/3;
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Bebas Neue";
   font-weight: 400;
   font-style: normal;
-  font-size: 60px;
+  font-size: 3rem;
 }
-/* Container du message */
+
 #outro-message {
+  color: rgb(211, 140, 48);
+  grid-column: 2/3;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: "Bebas Neue";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
   display: flex;
-  flex-direction: column;  /* Les éléments à l'intérieur seront disposés en colonne */
-  align-items: center; /* Centrer le texte et le bouton */
+  flex-direction: column;  
+  align-items: center; 
   text-align: center;
   margin: 20px 0;
 }
 @media (max-width: 600px) {
   #outro-message {
-    font-size: 1.2rem;
+    font-size: 3.2rem;
     padding: 15px;
   }
 
-/* Le texte du message */
+
 #outro-message .message2 {
-  font-size: 1.2rem;
-  margin-bottom: 20px; /* Espace entre le texte et le bouton */
-  padding: 10px;
-  background-color: #f4f4f4; /* Un fond clair */
+  color: rgb(211, 140, 48);
+  font-family: "Bebas Neue";
+  margin-bottom: 20px; 
+  background-color: #f4f4f4; 
   border-radius: 10px;
 }
+}
 
-/* Style du bouton Recommencer */
 #reset-btn {
+  font-family: "Bebas Neue";
+  display: block;
   padding: 10px 20px;
-  background-color: #007bff; /* Couleur bleu pour le bouton */
-  color: white;
+  margin: 50px 30px;
+  background-color: #007bff;
   font-size: 1rem;
   border: none;
   border-radius: 5px;
@@ -175,7 +217,14 @@ p {
   transition: background-color 0.3s ease;
 }
 
-/* Changement de couleur du bouton au survol */
+#oui-btn, #non-btn{
+  font-family: "Bebas Neue";
+  width: 200px
+}
+
+
 #reset-btn:hover {
   background-color: #0056b3;
 }
+ 
+

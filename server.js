@@ -7,6 +7,11 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
 
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  next();
+});
+
 // Servir les fichiers statiques (HTML, CSS, JS)
 app.use(express.static("public"));
 
