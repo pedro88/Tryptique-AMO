@@ -24,6 +24,22 @@
       // public/screen.js
       const socket = io();
 
+      async function requestWakeLock() {
+        try {
+          if ('wakeLock' in navigator) {
+            const wakeLock = await navigator.wakeLock.request('screen');
+            console.log('Wake lock acquise');
+          } else {
+            console.log('Wake lock API non supportée');
+          }
+        } catch (err) {
+          console.error('Erreur lors de l\'activation du Wake Lock', err);
+        }
+      }
+
+      // Appeler la fonction pour demander un wake lock dès que la page est prête
+      requestWakeLock();
+
       // Écouter l'événement de mise à jour des écrans
       socket.on("miseAJourEcrans", (message) => {
         document.getElementById(
