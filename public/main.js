@@ -89,24 +89,24 @@ const addListener = () => {
       console.log(logoId);
 
       // Fonction d'inscription du message de fin sur l'écran principal + bouton reset
-      const outro = () => {
+      const showOutro = (logoId) => {
         let message = "";
         if (logoId === "facebook") {
-          message = `Acceptes-tu n'importe qui comme ami sur Facebook?`;
+          message = `Acceptes-tu n'importe qui comme ami sur Facebook ?`; // Espace avant le point d'interrogation
         } else if (logoId === "insta") {
-          message = `Et toi, comment montres-tu à quelqu'un qu'il compte pour toi?`;
+          message = `Et toi, comment montres-tu à quelqu'un qu'il compte pour toi ?`; // Accord de "montres-tu"
         } else if (logoId === "tiktok") {
-          message = `Et toi quand tu as une question, comment fais-tu pour vérifier la réponse?`;
+          message = `Et toi, quand tu as une question, comment fais-tu pour vérifier la réponse ?`; // "une question"
         } else if (logoId === "bereal") {
-          message = `Et toi, est-ce que c'est toujours instantané?`;
+          message = `Et toi, est-ce que c'est toujours instantané ?`; // "est-ce que"
         } else if (logoId === "steam") {
-          message = `Et toi, qu'attends tu dans tes relations?`;
+          message = `Et toi, qu'attends-tu dans tes relations ?`; // Trait d'union dans "attends-tu"
         } else if (logoId === "aliexpress") {
-          message = `Quand tu souhaites acheter quelque chose, demandes-tu l'accord avant?`;
+          message = `Quand tu souhaites acheter quelque chose, demandes-tu l'accord avant ?`; // "demandes-tu"
         } else if (logoId === "snapchat") {
-          message = `As-tu toujours confiance quand tu envoies quelque chose sur Snap?`;
+          message = `As-tu toujours confiance quand tu envoies quelque chose sur Snap ?`; // "As-tu"
         } else {
-          message = `Et toi, tu sais où tu te trouves?`;
+          message = `Et toi, tu sais où tu te trouves ?`; // "tu te trouves"
         }
       
         // Conteneur du message

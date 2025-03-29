@@ -1,2 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><defs><style>.a{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}</style></defs><path class="a" d="M8.34,8.27A2.77,2.77,0,0,0,5.5,11.1V39.87A2.8,2.8,0,0,0,8.4,42.5H39.76a2.77,2.77,0,0,0,2.74-3V11a2.8,2.8,0,0,0-3.13-2.68Z"/><path class="a" d="M39.72,8.27h0A2.77,2.77,0,0,0,37,5.5H11A2.77,2.77,0,0,0,8.27,8.27h0"/><circle class="a" cx="13.13" cy="22.11" r="1.94"/><circle class="a" cx="34.86" cy="22.11" r="1.94"/><path class="a" d="M13.3,24a10.87,10.87,0,0,0,21.39,0"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="800"
+   height="800"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="aliexpress.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <defs
+     id="defs1">
+    <style
+       id="style1">.a{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}</style>
+  </defs>
+  <path
+     class="a"
+     d="m 39.72,8.27 v 0 A 2.77,2.77 0 0 0 37,5.5 H 11 A 2.77,2.77 0 0 0 8.27,8.27 v 0"
+     id="path2"
+     style="fill:#fe0000;fill-opacity:1" />
+  <path
+     class="a"
+     d="M 8.34,8.27 A 2.77,2.77 0 0 0 5.5,11.1 v 28.77 a 2.8,2.8 0 0 0 2.9,2.63 h 31.36 a 2.77,2.77 0 0 0 2.74,-3 V 11 A 2.8,2.8 0 0 0 39.37,8.32 Z"
+     id="path1"
+     style="fill:#fe0000;fill-opacity:1" />
+  <circle
+     class="a"
+     cx="13.13"
+     cy="22.110001"
+     r="1.9400001"
+     id="circle2" />
+  <circle
+     class="a"
+     cx="34.860001"
+     cy="22.110001"
+     r="1.9400001"
+     id="circle3" />
+  <path
+     class="a"
+     d="m 13.3,24 a 10.87,10.87 0 0 0 21.39,0"
+     id="path3" />
+</svg>
