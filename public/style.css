@@ -227,4 +227,21 @@ p {
   background-color: #0056b3;
 }
  
+#et-toi-btn {
+  font-family: "Bebas Neue";
+  padding: 15px 30px;
+  font-size: 2rem;
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin: 20px auto;
+  display: block;
+}
 
+#et-toi-btn:hover {
+  background-color: #d35400;
+  transform: scale(1.05);
+}
