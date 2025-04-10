@@ -227,21 +227,16 @@ p {
   background-color: #0056b3;
 }
  
-#et-toi-btn {
+#etToi-btn {
   font-family: "Bebas Neue";
-  padding: 15px 30px;
-  font-size: 2rem;
-  background-color: #e67e22;
-  color: white;
+  width: 200px;
+  background-color: #3498db;
+  color: #ffffff;
   border: none;
+  padding: 30px 20px;
   border-radius: 50px;
+  font-size: 5rem;
   cursor: pointer;
-  transition: all 0.3s;
-  margin: 20px auto;
-  display: block;
+  transition: background-color 0.3s ease;
 }
 
-#et-toi-btn:hover {
-  background-color: #d35400;
-  transform: scale(1.05);
-}
