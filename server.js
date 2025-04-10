@@ -65,6 +65,27 @@ socket.on("choice", (logoId) => {
   }
 });
 
+// Réception de l'événement Et Toi
+socket.on("etToiChoice", (logoId) => {
+  if (logoId === "facebook") {
+    io.emit("miseAJourEcrans", `Acceptes-tu n'importe qui comme ami sur Facebook ?`);
+  } else if (logoId === "insta") {
+    io.emit("miseAJourEcrans", `Et toi, comment montres-tu à quelqu'un qu'il compte pour toi ?`);
+  } else if (logoId === "tiktok") {
+    io.emit("miseAJourEcrans", `Et toi, quand tu as une question, comment fais-tu pour vérifier la réponse ?`);
+  } else if (logoId === "bereal") {
+    io.emit("miseAJourEcrans", `Et toi, est-ce que c'est toujours instantané ?`);
+  } else if (logoId === "steam") {
+    io.emit("miseAJourEcrans", `Et toi, qu'attends-tu dans tes relations ?`);
+  } else if (logoId === "aliexpress") {
+    io.emit("miseAJourEcrans", `Quand tu souhaites acheter quelque chose, demandes-tu l'accord avant ?`);
+  } else if (logoId === "snapchat") {
+    io.emit("miseAJourEcrans", `As-tu toujours confiance quand tu envoies quelque chose sur Snap ?`);
+  } else {
+    io.emit("miseAJourEcrans", `Et toi, tu sais où tu te trouves ?`);
+  }
+});
+
   // Réinitialisation des écrans
   socket.on("reset", () => {
     io.emit("resetEcrans");
